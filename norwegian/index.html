@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Finn din flytur</title>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <h1>Finn din flytur</h1>
+        
+        <form action="https://www.norwegian.no/ipc/availability/avaday">
+            <div>
+                <select name="D_City" required>
+                    <option value="">Velg flyplass for avvreise</option>
+                    <option value="OSL">Oslo Lufthavn</option>
+                    <option value="BGO">Bergen</option>
+                    <option value="TRD">Trondheim</option>
+                </select>
+            </div>
+
+            <div>
+                <select name="A_City" required>
+                    <option value="">Velg flyplass for reisemål</option>
+                    <option value="OSL">Oslo Lufthavn</option>
+                    <option value="BGO">Bergen</option>
+                    <option value="TRD">Trondheim</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Antall reisende: </label>
+                <input 
+                    required    
+                    type="number" 
+                    name="AdultCount" 
+                    value="2" 
+                    min="1" max="10"> 
+            </div>
+
+            <div>
+                <label for="rb-tur-retur">Tur/retur</label> <!--Da kan man trykke på teksten, når du bruker "for"-->
+                <input id="rb-tur-retur" type="radio" name="TripType" value="2">
+
+                <label for="rb-en-vei">En vei</label> <!--Da kan man trykke på teksten, når du bruker "for"-->
+                <input id="rb-en-vei" type="radio" name="TripType" value="1">
+            </div>
+
+            <div>
+                <button type="submit">SØK PÅ FLYTUR</button>
+            </div>
+        </form>  
+
+
+    </body>
+</html>
+
+<!--A_City=BGO&AdultCount=1&ChildCount=0&CurrencyCode=NOK&D_City=OSLALL&D_Day=12&D_Month=201909&D_SelectedDay=12&IncludeTransit=true&InfantCount=0&R_Day=12&R_Month=201909&R_SelectedDay=12&TripType=2&mode=ab-->
