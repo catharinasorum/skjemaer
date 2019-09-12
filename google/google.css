@@ -1,0 +1,31 @@
+body {
+    font-family: sans-serif;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 300px 80px;
+}
+
+input[type=text] {
+    padding: 16px;
+    font-size: 14px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+
+    /* runde kanter, måte 1 å skrive det på */
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    
+    transition: 0.5s;
+}
+
+
+input[type=text]:focus { /* Når du trykker inn i boksen */
+    outline: none;
+    background-color: #ddd;
+}
+
+button {
+    border-radius: 0 7px 7px 0; /* runder kanter, måte 2 å skrive det på */
+}
